@@ -11,12 +11,12 @@ keywords = ["wayland", "windowing"]
 rust-version = "1.65.0"
 
 [dependencies]
-wayland-client = "0.31.1"
-wayland-backend = "0.3.0"
+wayland-client = { git = "https://github.com/mwcampbell/wayland-rs", branch = "accessibility-protocol" }
+wayland-backend = { git = "https://github.com/mwcampbell/wayland-rs", branch = "accessibility-protocol" }
 calloop = "0.12.1"
 log = { version = "0.4.19", optional = true }
 rustix = { version = "0.38.4", default-features = false, features = ["std"] }
 
 [dev-dependencies]
 tempfile = "3.8.0"
-wayland-protocols = { version = "0.31.0", features = ["client"] }
+wayland-protocols = { git = "https://github.com/mwcampbell/wayland-rs", branch = "accessibility-protocol", features = ["client"] }
